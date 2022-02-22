@@ -1,10 +1,18 @@
-var http = require('http');
+var express = require('express');
 
-var server = http.createServer(function(req, res) {
-    console.log("URL страницы " + req.url);
-    res.writeHead(200, {'Content-type': 'text/plain; charset=utf-8'});
-    res.end('Привет мир!');
+app = express();
+
+app.get('/', function(req, res) {
+    res.send("Main page")
 });
 
-server.listen(3000, '127.0.0.1');
+app.get('/about', function(req, res) {
+    res.send("About page")
+});
+
+app.get('/news/:id', function(req, res) {
+    res.send('ID is :' + req.params.id);
+});
+
+app.listen(3000, '127.0.0.1');
 console.log("Server started!")
