@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-    res.send("About page")
+    res.render('about')
 });
 
 app.get('/news/:id', function(req, res) {
