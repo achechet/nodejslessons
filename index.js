@@ -5,7 +5,7 @@ app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-    res.send("Main page")
+    res.render('index')
 });
 
 app.get('/about', function(req, res) {
