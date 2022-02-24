@@ -13,7 +13,7 @@ app.get('/about', function(req, res) {
 });
 
 app.get('/news/:id', function(req, res) {
-    res.render('news', {newsId: req.params.id});
+    res.render('news/новости', {newsId: req.params.id});
 });
 
 app.listen(3000, '45.62.212.21');
