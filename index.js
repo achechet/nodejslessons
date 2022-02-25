@@ -18,8 +18,9 @@ app.get('/about', function(req, res) {
 });
 
 app.post('/about', urlencodedParser, function(req, res) {
-    console.log(req.body)
-    res.render('about')
+    if (!req.body) return res.sendStatus(400);
+    console.log(req.body);
+    res.render('about');
 });
 
 app.get('/news/:id', function(req, res) {
