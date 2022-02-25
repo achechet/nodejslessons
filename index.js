@@ -20,7 +20,7 @@ app.get('/about', function(req, res) {
 app.post('/about', urlencodedParser, function(req, res) {
     if (!req.body) return res.sendStatus(400);
     console.log(req.body);
-    res.render('about');
+    res.render('about-success', {data: req.body});
 });
 
 app.get('/news/:id', function(req, res) {
