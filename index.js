@@ -18,5 +18,4 @@ app.get('/news/:id', function(req, res) {
     res.render('news', {newsId: req.params.id});
 });
 
-app.listen(3000, '45.62.212.21');
-console.log("Server started!")
+app.listen(3000, '45.62.212.21', () => console.log(`App has been started...`))
