@@ -1,6 +1,9 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 
 app = express();
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set('view engine', 'ejs');
 
@@ -11,6 +14,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
+    res.render('about')
+});
+
+app.post('/about', urlencodedParser, function(req, res) {
+    console.log(req.body)
     res.render('about')
 });
 
