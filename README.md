@@ -1,4 +1,4 @@
 # nodejslessons
 Работа с NodeJS
-from home
+Duda Lessons
 
